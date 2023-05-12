@@ -1,9 +1,7 @@
 # Airport (learning C#)
 
 ## Case
-Make an "airport" and learn C#
-
-
+The point of this project is to learn C# and refresh other stuff.
 
 
 ## Classes
