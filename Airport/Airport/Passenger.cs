@@ -75,11 +75,11 @@ namespace Airport {
         /// <param name="Age"></param>
         /// <param name="Nationality"></param>
         void DBNewPassenger(int Id, string FirstName, string LastName, int Age, string Nationality) {
-            connection.Open();
             StringBuilder sb = new StringBuilder();
             sb.Append("INSERT INTO Passenger (Id, FirstName, LastName, Age, Nationality) ");
             sb.Append("VALUES (@id, @firstname, @lastname, @age, @nationality);");
             string sql = sb.ToString();
+
             using (SqlCommand command = new SqlCommand(sql, connection)) {
                 command.Parameters.AddWithValue("@id", Id);
                 command.Parameters.AddWithValue("@firstname", FirstName);
@@ -92,6 +92,7 @@ namespace Airport {
             }
 
         }
+
 
         void DBEditPassenger() {
 
